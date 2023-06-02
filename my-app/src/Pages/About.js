@@ -25,7 +25,6 @@ const About = () =>{
                         Your van is ready.
                         </div>
                         <span className="w-1/4 bg-black text-white p-4 rounded-lg text-center font-semibold">
-                            
                             <button>
                                 Explore our Vans
                             </button>
