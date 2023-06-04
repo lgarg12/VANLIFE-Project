@@ -1,5 +1,6 @@
 import React from "react";
 import Data from "../../Server/Data";
+import { Link } from "react-router-dom";
  
 const HostVans = () => {
     return(
@@ -12,6 +13,7 @@ const HostVans = () => {
                     {
                         Data.map((Car)=>{
                             return(
+                                <Link to={`/Host/HostVans/${Car.id}`}>
                                 <div className="w-full bg-white rounded-2xl flex items-center justify-between p-3" key={Car.id}>
                                     <div className="flex items-center gap-3">
                                         <img src={`${Car.imageUrl}`} alt="Cars" className=" rounded-2xl" width={100}/>
@@ -22,6 +24,7 @@ const HostVans = () => {
                                     </div>
                                     <div className="text-[#4D4D4D] text-xl">Edit</div>
                                 </div>
+                                </Link>
                             )
                         })
                     }
